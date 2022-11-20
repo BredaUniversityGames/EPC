@@ -1,0 +1,28 @@
+{% import _self as blocks %}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}EPC{% endblock %}
+
+{% block body %}
+    <section class="relative w-full shadow-lg">
+        <img class="-z-10 h-96 w-full"
+             src="{{ asset('images/tumblr_nk7a02T2oN1t2tumro1_1280.jpg') }}"
+             alt="">
+        <div class="absolute top-0 left-0 h-full w-full text-white backdrop-brightness-50">
+            <div class="flex h-full flex-col items-center justify-evenly text-center">
+                <div>
+                    <h1 class="mb-2 text-4xl font-extrabold uppercase">Everything Procedural</h1>
+                    <p>Conference for creatives that focuses on procedural content generation for games and unforgettable experiences.</p>
+                </div>
+
+                <div class="flex h-16 items-center justify-center">
+                    <a href="javascript:void(0)"
+                       class="flex w-full flex-row justify-between rounded-3xl bg-white py-2 pr-3 pl-6 font-bold uppercase text-black shadow-inner dark:bg-nevada-600 dark:text-white">
+                        Get tickets <i data-feather="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
