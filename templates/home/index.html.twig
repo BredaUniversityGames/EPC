@@ -5,6 +5,7 @@
 {% block title %}EPC{% endblock %}
 
 {% block body %}
+    {# HERO #}
     <section class="relative w-full shadow-lg">
         <img class="-z-10 h-96 w-full"
              src="{{ asset('images/tumblr_nk7a02T2oN1t2tumro1_1280.jpg') }}"
@@ -23,6 +24,22 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    {# BRANDING #}
+    <section class="bg-amber-300">
+        <div class="flex flex-row space-x-4">
+            {% set assets = [
+                'images/branding/BUas_Logo_Color_250x100.jpg',
+                'images/branding/Breda_Game_City_Black.png',
+                'images/branding/SideFX_Houdini_Logo.jpg',
+                'images/branding/EpicGames_Black_Knockout_RGB.png',
+                'images/branding/UE_Logo_stacked_unreal-engine_black.png',
+            ] %}
+            {% for asset in assets %}
+                <img class="h-32" src="{{ asset(asset) }}" alt="">
+            {% endfor %}
         </div>
     </section>
 {% endblock %}
