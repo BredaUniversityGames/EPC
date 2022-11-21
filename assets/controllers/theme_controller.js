@@ -2,8 +2,8 @@ import {Controller} from '@hotwired/stimulus';
 
 export default class extends Controller {
     static targets = ["sun", "moon", "logo"];
-    logoDarkMode = "/images/branding/logo_white.png";
-    logoLightMode = "/images/branding/logo_black.png";
+    logoDarkMode = "/images/branding/logo_white.webp";
+    logoLightMode = "/images/branding/logo_black.webp";
 
     connect() {
         if (localStorage.color_theme === 'dark' || (!('color_theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
