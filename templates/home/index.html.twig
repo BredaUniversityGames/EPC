@@ -5,8 +5,8 @@
 {% block title %}EPC{% endblock %}
 
 {% block body %}
-    {# HERO #}
-    <section class="relative w-full shadow-lg">
+    {# Hero #}
+    <section id="hero" class="relative w-full shadow-lg">
         <img class="-z-10 h-96 w-full"
              src="{{ asset('images/tumblr_nk7a02T2oN1t2tumro1_1280.jpg') }}"
              alt="">
@@ -28,22 +28,22 @@
     </section>
 
     {# Logo Cloud #}
-    <section class="grid grid-cols-6 grid-rows-2 gap-1 m-1">
-        <div class="bg-black bg-opacity-20 w-full col-span-2 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale" src="{{ asset('images/branding/Breda_Game_City_Black.webp') }}" alt="">
+    <section id="sponsors" class="grid grid-cols-6 grid-rows-2 gap-1 mx-1 my-4">
+        <div class="w-full col-span-2 h-24 p-2">
+            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/Breda_Game_City_Black.webp') }}" alt="">
         </div>
-        <div class="bg-black bg-opacity-20 w-full col-span-2 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale" src="{{ asset('images/branding/EpicGames_Black_Knockout_RGB.webp') }}" alt="">
+        <div class="w-full col-span-2 h-24 p-2">
+            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/EpicGames_Black_Knockout_RGB.webp') }}" alt="">
         </div>
-        <div class="bg-black bg-opacity-20 w-full col-span-2 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale" src="{{ asset('images/branding/UE_Logo_stacked_unreal-engine_black.webp') }}" alt="">
+        <div class="w-full col-span-2 h-24 p-2">
+            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/UE_Logo_stacked_unreal-engine_black.webp') }}" alt="">
         </div>
 
-        <div class="bg-black bg-opacity-20 w-full col-span-3 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale" src="{{ asset('images/branding/BUas_Logo_Color_250x100.webp') }}" alt="">
+        <div class="w-full col-span-3 h-24 p-2">
+            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/BUas_Logo_Color_250x100.webp') }}" alt="">
         </div>
-        <div class="bg-black bg-opacity-20 w-full col-span-3 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale" src="{{ asset('images/branding/SideFX_Houdini_Logo.webp') }}" alt="">
+        <div class="w-full col-span-3 h-24 p-2">
+            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/SideFX_Houdini_Logo.webp') }}" alt="">
         </div>
     </section>
 {% endblock %}
