@@ -1,0 +1,76 @@
+{% import _self as conference %}
+
+<section class="relative text-black dark:text-white bg-black bg-opacity-20 p-4">
+    <span id="conference" class="absolute -top-12"></span>
+    <div class="h-full items-center justify-evenly text-center pt-2 pb-4">
+        <h2 class="mb-2 text-4xl font-extrabold uppercase">Conference</h2>
+    </div>
+
+    <div class="space-y-4">
+        {# Matrix Awakens #}
+        <div class="p-4 bg-white rounded-xl dark:bg-nevada-600 shadow-lg">
+            <img class="h-full w-full object-contain rounded-lg mb-4"
+                 src="{{ asset('images/talks/EPC2022_Robert_Osborne_03.png') }}"
+                 alt="">
+            <h3 class="font-bold text-2xl">Building a City in the Matrix Awakens Experience</h3>
+            <p class="mt-3 font-light">An abridged overview of the procedural approaches and systems used to build the city in the 'Matrix Awakens Experience'.
+                Covering topics such as city and road network look and feel, defining zoning and architecture types in the city, through to the smaller prop
+                placement on buildings and sidewalk street furniture.</p>
+
+            <div class="flex flex-row mt-4 space-x-4">
+                <img class="h-12 w-12 object-contain rounded-full"
+                     src="{{ asset('images/avatar-default.png') }}"
+                     alt="">
+
+                <div class="flex flex-col">
+                    <p class="font-medium text-lg">Robert Osborne</p>
+                    <p>April 22, 2023 · Epic Games</p>
+                </div>
+            </div>
+        </div>
+
+        {# Living Procedurally #}
+        <div class="p-4 bg-white rounded-xl dark:bg-nevada-600 shadow-lg">
+            <img class="h-full w-full object-contain rounded-lg mb-4"
+                 src="{{ asset('images/talks/EPC2022_Nikola_Damjanov_01.jpg') }}"
+                 alt="">
+            <h3 class="font-bold text-2xl">Living Procedurally</h3>
+            <p class="mt-3 font-light">Bouncing back and forth between his day job as a game artist and his night shift as a procedural tinkerer, Nikola will
+                share how proceduralism has slowly creeped into all of his workflows and ways of artistic life. This talk will showcase his way of
+                cross-pollinating between his day job and personal work, not chasing perfection but having fun while experimenting.</p>
+
+            <div class="flex flex-row mt-4 space-x-4">
+                <img class="h-12 w-12 object-contain rounded-full"
+                     src="{{ asset('images/avatar-default.png') }}"
+                     alt="">
+
+                <div class="flex flex-col">
+                    <p class="font-medium text-lg">Nikola Damjanov</p>
+                    <p>April 22, 2023 · Nordeus</p>
+                </div>
+            </div>
+        </div>
+
+        {# Forza's Mexico #}
+        <div class="p-4 bg-white rounded-xl dark:bg-nevada-600 shadow-lg">
+            <img class="h-full w-full object-contain rounded-lg mb-4"
+                 src="{{ asset('images/talks/EPC2022_Andrea_and_Ole_02.jpg') }}"
+                 alt="">
+            <h3 class="font-bold text-2xl">How proceduralism helps create Forza Horizon 5’s version of Mexico</h3>
+            <p class="mt-3 font-light">Andrea Riccardi and Ole Greonbaek from Playground Games, will outline how Houdini and procedural world building was used
+                when building the beautiful and diverse world of Mexico for Forza Horizon 5. Andrea will be discussing the data sets, processes and development
+                choices, while Ole will walk you through the artists workflow and output.</p>
+
+            <div class="flex flex-row mt-4 space-x-4">
+                <img class="h-12 w-12 object-contain rounded-full"
+                     src="{{ asset('images/avatar-default.png') }}"
+                     alt="">
+
+                <div class="flex flex-col">
+                    <p class="font-medium text-lg">Andrea Riccardi & Ole Greonbaek</p>
+                    <p>April 22, 2023 · Playground Games</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
