@@ -18,17 +18,18 @@
             x close sidebar
         </button>
 
-        {{ menu.route('Chapter #1') }}
-        {{ menu.route('Chapter #2') }}
-        {{ menu.route('Chapter #3') }}
-        {{ menu.route('Chapter #4') }}
-        {{ menu.route('Chapter #5') }}
+        {{ menu.route('Home', '#hero') }}
+        {{ menu.route('Sponsors', '#sponsors') }}
+        {{ menu.route('Conference', '#conference') }}
+        {{ menu.route('Masterclass', '#masterclass') }}
+        {{ menu.route('Showcase', '#showcase') }}
+        {{ menu.route('Get Tickets', '#pricing') }}
     </aside>
 </div>
 
 {% macro route(name, route = 'javascript:void(0)') %}
- <a href="{{ route }}" class="flex h-12 items-center rounded-lg px-4 hover:bg-zinc-100 dark:hover:bg-nevada-800">
-     <span class="w-full">{{ name }}</span>
-     <span class="pl-4"><i data-feather="chevron-right"></i></span>
- </a>
+    <a href="{{ route }}" data-action="click->menu#close" class="flex h-12 items-center rounded-lg px-4 hover:bg-zinc-100 dark:hover:bg-nevada-800">
+        <span class="w-full">{{ name }}</span>
+        <span class="pl-4"><i data-feather="chevron-right"></i></span>
+    </a>
 {% endmacro %}
