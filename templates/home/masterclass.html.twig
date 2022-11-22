@@ -4,15 +4,17 @@
         <h2 class="mb-2 text-4xl font-extrabold uppercase">Masterclass</h2>
     </div>
 
-    <div class="space-y-4">
+    <div class="grid gap-4 grid-cols-1 lg:grid-cols-2">
         {# Matrix Awakens #}
         <div class="p-4 bg-white rounded-xl dark:bg-nevada-500 shadow-around">
-            <img class="h-full w-full object-contain rounded-lg mb-4"
-                 src="{{ asset('images/talks/EPC2022_Masterclass_Simon_Verstraete_03.jpg') }}"
-                 alt="">
-            <img class="h-full w-full object-contain rounded-lg mb-4"
-                 src="{{ asset('images/talks/EPC2022_Masterclass_Simon_Verstraete_01.jpg') }}"
-                 alt="">
+            <div class="grid grid-cols-2 lg:grid-cols-1 gap-4 mb-4">
+                <img class="h-full w-full rounded-lg"
+                     src="{{ asset('images/talks/EPC2022_Masterclass_Simon_Verstraete_03.jpg') }}"
+                     alt="">
+                <img class="h-full w-full rounded-lg"
+                     src="{{ asset('images/talks/EPC2022_Masterclass_Simon_Verstraete_01.jpg') }}"
+                     alt="">
+            </div>
             <h3 class="font-bold text-2xl">Powerful Procedural Workflows for Games</h3>
             <p class="mt-3 font-light">Preceding the "Everything Procedural Conference", Breda University of Applied Sciences will host a one-day SideFX Houdini
                 Masterclass by Simon Verstraete on Thursday, April 21st 2022. During this Masterclass you will learn how to build and use procedural tools for
