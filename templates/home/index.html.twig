@@ -5,82 +5,9 @@
 {% block title %}EPC{% endblock %}
 
 {% block body %}
-    {# Hero #}
-    <section id="hero" class="relative w-full shadow-lg">
-        <img class="-z-10 h-96 w-full"
-             src="{{ asset('images/tumblr_nk7a02T2oN1t2tumro1_1280.jpg') }}"
-             alt="">
-        <div class="absolute top-0 left-0 h-full w-full text-white backdrop-brightness-50">
-            <div class="flex h-full flex-col items-center justify-evenly text-center">
-                <div>
-                    <h1 class="mb-2 text-4xl font-extrabold uppercase">Everything Procedural</h1>
-                    <p class="max-w-2xl">Conference for creatives that focuses on procedural content generation for games and unforgettable experiences.</p>
-                </div>
+    {% include 'home/hero.html.twig' %}
+    {% include 'home/logo_cloud.html.twig' %}
 
-                <div class="flex h-16 items-center justify-center">
-                    <a href="javascript:void(0)"
-                       class="flex w-full flex-row justify-between rounded-3xl bg-white py-2 pr-3 pl-6 font-bold uppercase text-black shadow-inner dark:bg-nevada-600 dark:text-white">
-                        Get tickets <i data-feather="chevron-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {# Logo Cloud #}
-    <section id="sponsors" class="grid grid-cols-6 grid-rows-2 gap-1 mx-1 my-4">
-        <div class="w-full col-span-2 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/Breda_Game_City_Black.webp') }}" alt="">
-        </div>
-        <div class="w-full col-span-2 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/EpicGames_Black_Knockout_RGB.webp') }}" alt="">
-        </div>
-        <div class="w-full col-span-2 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/UE_Logo_stacked_unreal-engine_black.webp') }}" alt="">
-        </div>
-
-        <div class="w-full col-span-3 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/BUas_Logo_Color_250x100.webp') }}" alt="">
-        </div>
-        <div class="w-full col-span-3 h-24 p-2">
-            <img class="w-full h-full object-contain grayscale dark:grayscale-0" src="{{ asset('images/branding/SideFX_Houdini_Logo.webp') }}" alt="">
-        </div>
-    </section>
-
-    {# Pricing #}
-    <section class="px-2 bg-black bg-opacity-20">
-        <section>
-            <h2 class="text-2xl font-bold">Online tickets conference</h2>
-
-            <div class="grid grid-cols-2 grid-rows-2 gap-2">
-                <div class="border border-black rounded-lg w-full">
-                    <h2>BUas students</h2>
-                    <h3>FREE</h3>
-                </div>
-
-                <div class="border border-black rounded-lg w-full">
-                    <h2>Alumni</h2>
-                    <h3>€9,50</h3>
-                </div>
-
-                <div class="border border-black rounded-lg w-full">
-                    <h2>Students from other institutes</h2>
-                    <h3>€9,50</h3>
-                </div>
-
-                <div class="border border-black rounded-lg w-full">
-                    <h2>Industry</h2>
-                    <h3>€49,50</h3>
-                </div>
-            </div>
-        </section>
-
-        <div>
-            <h1>On Campus</h1>
-        </div>
-
-        <div>
-            <h1>Masterclass</h1>
-        </div>
-    </section>
+    {# WIP #}
+    {% include 'home/pricing_table.html.twig' %}
 {% endblock %}
