@@ -5,23 +5,23 @@
     <div data-controller="banner">
         {{ header.banner(
             'Big news! We\'re excited to announce a brand-new website.',
-            'We announced a new product!'
+            'We announced a new website!'
         ) }}
     </div>
 
     <header {# data-controller="theme" #}
-            class="flex h-12 flex-row items-center justify-between bg-white px-4 py-1 shadow-lg sm:justify-center sm:gap-8 md:h-16 lg:justify-evenly">
+            class="flex h-16 flex-row items-center justify-between bg-white px-4 py-1 shadow-lg sm:justify-center sm:gap-8 lg:justify-evenly">
         {# Div used for header spacing, uncomment div contents to activate theme switcher #}
-{#        <div class="sm:hidden w-[24px] lg:block lg:w-[160px]">#}
+        <div class="sm:hidden w-[24px] lg:block lg:w-[160px] lg:hidden">
             {#            <button type="button" class="sm:hidden"> #}
             {#                <i data-action="click->theme#enableDarkMode" data-theme-target="moon" class="hidden" data-feather="moon"></i> #}
             {#                <i data-action="click->theme#enableLightMode" data-theme-target="sun" class="hidden" data-feather="sun"></i> #}
             {#            </button> #}
-{#        </div>#}
+        </div>
         <div class="flex h-full flex-row items-center justify-between sm:justify-center sm:gap-8">
             {{ header.route_header('Conference', '#conference') }}
             {{ header.route_header('Masterclass', '#masterclass') }}
-            <a href="#hero">
+            <a href="#">
                 <img data-theme-target="logo" class="h-full max-h-10" src="{{ asset('images/branding/logo_black.webp') }}" alt="EPC con logo">
             </a>
             {{ header.route_header('Showcase', '#showcase') }}
@@ -42,7 +42,7 @@
             x close sidebar
         </button>
 
-        {{ header.route_menu('Home', '#hero') }}
+        {{ header.route_menu('Home', '#') }}
         {{ header.route_menu('Conference', '#conference') }}
         {{ header.route_menu('Masterclass', '#masterclass') }}
         {{ header.route_menu('Showcase', '#showcase') }}
