@@ -1,13 +1,22 @@
 {% import _self as header %}
 
 <div data-controller="menu" class="sticky top-0 z-30">
-    <header {# data-controller="theme" #} class="flex h-12 md:h-16 flex-row items-center justify-between bg-white px-4 py-1 shadow-lg sm:justify-center sm:gap-8 lg:justify-evenly">
+    {# Banners / Alerts #}
+    <div data-controller="banner">
+        {{ header.banner(
+            'Big news! We\'re excited to announce a brand-new website.',
+            'We announced a new product!'
+        ) }}
+    </div>
+
+    <header {# data-controller="theme" #}
+            class="flex h-12 flex-row items-center justify-between bg-white px-4 py-1 shadow-lg sm:justify-center sm:gap-8 md:h-16 lg:justify-evenly">
         {# Div used for header spacing, uncomment div contents to activate theme switcher #}
         <div class="sm:hidden w-[24px] lg:block lg:w-[160px]">
-{#            <button type="button" class="sm:hidden">#}
-{#                <i data-action="click->theme#enableDarkMode" data-theme-target="moon" class="hidden" data-feather="moon"></i>#}
-{#                <i data-action="click->theme#enableLightMode" data-theme-target="sun" class="hidden" data-feather="sun"></i>#}
-{#            </button>#}
+            {#            <button type="button" class="sm:hidden"> #}
+            {#                <i data-action="click->theme#enableDarkMode" data-theme-target="moon" class="hidden" data-feather="moon"></i> #}
+            {#                <i data-action="click->theme#enableLightMode" data-theme-target="sun" class="hidden" data-feather="sun"></i> #}
+            {#            </button> #}
         </div>
         <div class="flex h-full flex-row items-center justify-between sm:justify-center sm:gap-8">
             {{ header.route_header('Conference', '#conference') }}
@@ -19,15 +28,17 @@
             {{ header.route_header('About') }}
         </div>
 
-        <div class="hidden rounded-full border border-black bg-black py-2 pr-2 pl-4 font-bold w-40 uppercase text-white hover:bg-white hover:text-black lg:block">
+        <div class="hidden w-40 rounded-full border border-black bg-black py-2 pr-2 pl-4 font-bold uppercase text-white hover:bg-white hover:text-black lg:block">
             <a href="javascript:void(0)" class="flex w-full flex-row gap-2">Get tickets<i data-feather="chevron-right"></i></a>
         </div>
         <button class="sm:hidden" type="button" data-action="click->menu#open"><i data-feather="menu"></i></button>
     </header>
 
-    <div data-menu-target="overlay" data-action="click->menu#close" class="pointer-events-none fixed top-0 z-40 h-screen w-screen cursor-pointer bg-zinc-300 opacity-0 transition-opacity duration-500 ease-out"></div>
+    <div data-menu-target="overlay" data-action="click->menu#close"
+         class="pointer-events-none fixed top-0 z-40 h-screen w-screen cursor-pointer bg-zinc-300 opacity-0 transition-opacity duration-500 ease-out"></div>
     <aside data-menu-target="menu" class="fixed top-0 -right-full z-50 h-full w-5/6 max-w-sm bg-white p-5 duration-500 ease-in-out md:-right-96">
-        <button type="button" data-menu-target="closeButton" class="pointer-events-none absolute top-0 -left-32 block w-max origin-bottom-right -rotate-90 uppercase opacity-0 duration-500 ease-in-out hover:text-white">
+        <button type="button" data-menu-target="closeButton"
+                class="pointer-events-none absolute top-0 -left-32 block w-max origin-bottom-right -rotate-90 uppercase opacity-0 duration-500 ease-in-out hover:text-white">
             x close sidebar
         </button>
 
@@ -37,7 +48,8 @@
         {{ header.route_menu('Showcase', '#showcase') }}
         {{ header.route_menu('About') }}
 
-        <a href="javascript:void(0)" data-action="click->menu#close" class="mt-16 flex items-center rounded-full border border-black bg-black px-4 py-2 font-bold uppercase text-white hover:bg-white hover:text-black">
+        <a href="javascript:void(0)" data-action="click->menu#close"
+           class="mt-16 flex items-center rounded-full border border-black bg-black px-4 py-2 font-bold uppercase text-white hover:bg-white hover:text-black">
             <span class="w-full">Get Tickets</span>
             <span class="pl-4"><i data-feather="chevron-right"></i></span>
         </a>
@@ -53,4 +65,28 @@
 
 {% macro route_header(name, route = 'javascript:void(0)') %}
     <a href="{{ route }}" class="hidden text-sm font-bold uppercase animate-underline sm:block">{{ name }}</a>
+{% endmacro %}
+
+{% macro banner(message, short_message, route) %}
+    <div class="bg-yellow-100 drop-shadow">
+        <div class="mx-auto max-w-7xl py-0.5 px-2 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between">
+                <i data-feather="bell" class="h-4 w-4 fill-amber-300"></i>
+                <div class="flex w-0 flex-1 items-center">
+                    <p class="ml-3 truncate text-sm font-medium">
+                        <span class="md:hidden">{{ short_message }}</span>
+                        <span class="hidden md:inline">{{ message }}</span>
+                    </p>
+                </div>
+
+                <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+                    <button data-action="click->banner#hide" type="button"
+                            class="-mr-1 flex rounded-md p-2 focus:outline-none sm:-mr-2">
+                        <span class="sr-only">Dismiss</span>
+                        <i data-feather="x" class="h-4 w-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endmacro %}
