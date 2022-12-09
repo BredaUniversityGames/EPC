@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .card {
+        @apply rounded-xl bg-white p-4 shadow-around min-h-16
+    }
+}
+
 @layer utilities {
     .animate-underline {
         position: relative;
@@ -26,7 +32,7 @@
     }
 
     .animate-underline:hover::after,
-    .animate-underline:focus::after{
+    .animate-underline:focus::after {
         transform: translate3d(0, 0, 0);
     }
 }
