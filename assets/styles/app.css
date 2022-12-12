@@ -31,8 +31,7 @@
         transform: translate3d(-101%, 0, 0);
     }
 
-    .animate-underline:hover::after,
-    .animate-underline:focus::after {
+    .animate-underline:hover::after {
         transform: translate3d(0, 0, 0);
     }
 }
