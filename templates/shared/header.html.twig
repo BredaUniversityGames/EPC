@@ -9,15 +9,8 @@
 {#        ) }}#}
     </div>
 
-    <header {# data-controller="theme" #}
-            class="flex h-16 flex-row items-center justify-between bg-white px-4 py-1 shadow-lg sm:justify-center sm:gap-8 lg:justify-evenly">
-        {# Div used for header spacing, uncomment div contents to activate theme switcher #}
-        <div class="sm:hidden w-[24px] lg:block lg:w-[160px] lg:hidden">
-            {#            <button type="button" class="sm:hidden"> #}
-            {#                <i data-action="click->theme#enableDarkMode" data-theme-target="moon" class="hidden" data-feather="moon"></i> #}
-            {#                <i data-action="click->theme#enableLightMode" data-theme-target="sun" class="hidden" data-feather="sun"></i> #}
-            {#            </button> #}
-        </div>
+    <header class="flex h-16 flex-row items-center justify-between bg-white px-4 py-1 shadow-lg sm:justify-center sm:gap-8 lg:justify-evenly">
+        <div class="sm:hidden w-[24px] lg:block lg:w-[160px] lg:hidden"></div>
         <div class="flex h-full flex-row items-center justify-between sm:justify-center sm:gap-8">
             {{ header.route_header('Conference', '#conference') }}
             {{ header.route_header('Masterclass', '#masterclass') }}
@@ -25,12 +18,8 @@
                 <img data-theme-target="logo" class="h-full max-h-10" src="{{ asset('images/branding/logo_black.webp') }}" alt="EPC con logo">
             </a>
             {{ header.route_header('Showcase', '#showcase') }}
-            {{ header.route_header('About', '#about') }}
+            <a href="#" class="hidden text-sm font-bold uppercase animate-underline sm:block">Tickets</a>
         </div>
-
-{#        <div class="hidden w-40 rounded-full border border-black bg-black py-2 pr-2 pl-4 font-bold uppercase text-white hover:bg-white hover:text-black lg:block">#}
-{#            <a href="javascript:void(0)" class="flex w-full flex-row gap-2">Get tickets<i data-feather="chevron-right"></i></a>#}
-{#        </div>#}
         <button class="sm:hidden" type="button" data-action="click->menu#open"><i data-feather="menu"></i></button>
     </header>
 
@@ -46,7 +35,6 @@
         {{ header.route_menu('Conference', '#conference') }}
         {{ header.route_menu('Masterclass', '#masterclass') }}
         {{ header.route_menu('Showcase', '#showcase') }}
-        {{ header.route_menu('About', '#about') }}
 
         <a href="javascript:void(0)" data-action="click->menu#close"
            class="mt-2 flex items-center rounded-full border border-black bg-black px-4 py-2 font-bold uppercase text-white hover:bg-white hover:text-black">
@@ -88,29 +76,22 @@
 {% endmacro %}
 
 {% macro route_header(name, route = 'javascript:void(0)') %}
-    <a href="{{ route }}" class="hidden text-sm font-bold uppercase animate-underline sm:block">{{ name }}</a>
+    <a href="{{ route }}" class="flex hidden flex-nowrap text-sm font-bold uppercase animate-underline sm:inline-block">{{ name }}</a>
 {% endmacro %}
 
 {% macro banner(message, short_message, route) %}
-    <div class="bg-yellow-100 drop-shadow">
-        <div class="mx-auto max-w-7xl py-0.5 px-2 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap items-center justify-between">
-                <i data-feather="bell" class="h-4 w-4 fill-amber-300"></i>
-                <div class="flex w-0 flex-1 items-center">
-                    <p class="ml-3 truncate text-sm font-medium">
-                        <span class="md:hidden">{{ short_message }}</span>
-                        <span class="hidden md:inline">{{ message }}</span>
-                    </p>
-                </div>
-
-                <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
-                    <button data-action="click->banner#hide" type="button"
-                            class="-mr-1 flex rounded-md p-2 focus:outline-none sm:-mr-2">
-                        <span class="sr-only">Dismiss</span>
-                        <i data-feather="x" class="h-4 w-4"></i>
-                    </button>
-                </div>
-            </div>
+    <div class="bg-yellow-100 drop-shadow flex flex-row items-center justify-between max-w-7xl py-0.5 px-2 sm:px-6 lg:px-8">
+        <div class="h-4 w-4"></div>
+        <div class="flex flex-row items-center">
+            <i data-feather="bell" class="h-4 w-4 fill-amber-300"></i>
+            <p class="ml-3 truncate text-sm font-medium">
+                <span class="md:hidden">{{ short_message }}</span>
+                <span class="hidden md:inline">{{ message }}</span>
+            </p>
         </div>
+        <button data-action="click->banner#hide" type="button" class="-mr-1 flex rounded-md p-2 focus:outline-none sm:-mr-2">
+            <span class="sr-only">Dismiss</span>
+            <i data-feather="x" class="h-4 w-4"></i>
+        </button>
     </div>
 {% endmacro %}

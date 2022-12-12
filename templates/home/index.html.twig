@@ -6,13 +6,11 @@
 
 {% block body %}
     {% include 'home/hero.html.twig' %}
-    {% include 'home/logo_cloud.html.twig' %}
+    <div class="container m-auto">
+        {% include 'home/logo_cloud.html.twig' %}
 
-    {% include 'home/conference.html.twig' %}
-    {% include 'home/newsletter.html.twig' %}
-
-    {% include 'home/masterclass.html.twig' %}
-    {% include 'home/socials.html.twig' %}
-
-    {% include 'home/showcase.html.twig' %}
+        {% include 'home/conference.html.twig' %}
+        {% include 'home/masterclass.html.twig' %}
+        {% include 'home/showcase.html.twig' %}
+    </div>
 {% endblock %}
