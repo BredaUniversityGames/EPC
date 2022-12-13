@@ -1,22 +1,24 @@
-<footer class="relative p-4 container m-auto">
+<footer class="container relative m-auto p-4">
     <span id="about" class="absolute -top-16"></span>
     <div class="h-full items-center justify-evenly pt-2 pb-4 text-center">
         <h2 class="mb-2 text-4xl font-extrabold uppercase">Information</h2>
     </div>
 
-    <div class="grid gap-4 grid-cols-12">
+    <div class="grid grid-cols-12 gap-4">
         {% include 'shared/socials.html.twig' %}
         {% include 'shared/newsletter.html.twig' %}
 
-        <div class="rounded-xl bg-white p-4 shadow-around col-span-full md:col-span-5">
+        <div class="col-span-full rounded-xl bg-white p-4 shadow-around md:col-span-5">
             <h3 class="font-extrabold uppercase">Location</h3>
-            Cras diam nisl, molestie eget ante eu, posuere faucibus lacus. Suspendisse potenti. Integer pharetra facilisis mattis. Duis placerat turpis ac
-            orci
-            viverra egestas. Ut nec semper ligula. Mauris consectetur elit magna, quis gravida elit bibendum at. Donec tristique leo in elit vestibulum
-            ullamcorper.
+            <div class="flex flex-col">
+                <p>Breda University of Applied Sciences</p>
+                <p>Mgr. Hopmansstraat 1</p>
+                <p>4817 JS Breda</p>
+                <p>the Netherlands</p>
+            </div>
         </div>
 
-        <div class="rounded-xl bg-white p-4 shadow-around col-span-full md:col-span-7">
+        <div class="col-span-full rounded-xl bg-white p-4 shadow-around md:col-span-7">
             <h3 class="font-extrabold uppercase">Archive</h3>
             <div class="mt-4 grid grid-cols-3 gap-4 md:grid-cols-2">
                 <a href="https://everythingprocedural.com/" class="rounded-lg bg-black bg-opacity-20 px-4 py-2 text-center font-bold shadow hover:bg-opacity-70 hover:text-white">EPC 2022</a>
