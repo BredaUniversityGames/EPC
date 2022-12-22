@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,5 +35,34 @@
 
     .animate-underline:hover::after {
         transform: translate3d(0, 0, 0);
+    }
+
+    .big-text
+    {
+        font-family:    Georgia, serif;
+        font-size:      40px;
+        font-weight:    bold;
+    }
+
+    .triangle {        
+        display: block;
+        height: 0px;
+        width: 0px;
+        border: 20px solid transparent;
+        border-top-color: #00C3E3;
+        position: absolute;
+        bottom: -40px;
+        left: calc(50% - 10px);
+    }
+
+    .top-triangle {
+        display: block;
+        height: 0px;
+        width: 0px;
+        border: 20px solid transparent;
+        border-top-color: #ffffff;
+        position: absolute;
+        top: 0px;
+        left: calc(50% - 10px);
     }
 }

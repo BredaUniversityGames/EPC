@@ -1,11 +1,15 @@
 {% import _self as conference %}
+<section class="relative p-8 container m-auto" >    
+</section>
 
-<section class="relative p-4 container m-auto">
+<section class="relative p-4 container m-auto bg-epcblue rounded">
     <span id="conference" class="absolute -top-16"></span>
-    <div class="h-full items-center justify-evenly pt-2 pb-4 text-center">
-        <h2 class="mb-2 text-4xl font-extrabold uppercase">Conference</h2>
+    <div class="h-full items-center justify-evenly pt-2 pb-4 text-center text-white">
+        <h2 class="mb-2 text-5xl font-extrabold uppercase font-sharetech">Conference</h2>
+        <h3 class="mb-2 text-2xl font-extrabold uppercase font-sharetech">Firday 21-04-2023</h3>        
     </div>
 
+    <!--
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
         {{ conference.entry(
             'Building a City in the Matrix Awakens Experience',
@@ -32,72 +36,22 @@
             asset('images/talks/EPC2022_Mark_R_Johnson_01.gif'),
             'April 23, 2023',
         ) }}
-
-        {{ conference.entry(
-            'Automated Physically-Based Animation Through Reinforcement Learning',
-            'In this talk, Riley Miladi, Machine Learning Research Engineer at Embark Studios, will explore what happens if we allow characters to learn to walk and interact with the environment by themselves, using Machine Learning in a physics simulation. This talk will first outline what physically-based animation is and how it can lead to emergent gameplay. Secondly, we look into how Embark Studios is tackling this problem by treating characters as robots and training them using Reinforcement Learning and how this has allowed us to animate arbitrary characters automatically. Lastly, Riley will share the outcomes from different animation efforts at Embark Studios and some technical details of this animation system.',
-            'Riley Miladi',
-            asset('images/talks/EPC2022_Riley_Miladi_02.png'),
-            'April 23, 2023',
-            'Embark Studios',
-        ) }}
-
-        {{ conference.entry(
-            'Create and Fracture - Remedy\'s CONTROL: Foundation DLC',
-            'This talk sheds light in how we developed visuals and functionality of Create and Fracture - the two new abilities central to exploring the caves under the Oldest House in the CONTROL: The Foundation DLC. The entire process from exploration to implementation was rooted in procedural workflows, making Houdini a central part of being able to design this key Gameplay and Level Design element in a very short amount of production time, leading to a rather memorable experience exploring the new weird world of the Oldest House a little more.',
-            'Johannes Richter',
-            asset('images/talks/EPC2022_Johannes_Richter_03.png'),
-            'April 23, 2023',
-            'Remedy Games',
-        ) }}
-
-        {{ conference.entry(
-            'Procedural Techniques in Solar Ash',
-            'Solar Ash, the next game from the makers of Hyperlight Drifter, extensively employed Houdini and the Houdini Engine inside Unreal to allow the world to stay in flux up until the last possible moment, giving designers and artists the flexibility to experiment. This presentation will reveal the ways Houdini and other procedural techniques were used and the challenges the small studio had to overcome attempting a large open-world game with fast movement and precise platforming.',
-            'Len White',
-            asset('images/talks/EPC2022_Len_White_03.png'),
-            'April 23, 2023',
-            'Heart Machine',
-        ) }}
-
-        {{ conference.entry(
-            'Worldbuilding Pipeline at Twirlbound',
-            'The main focus of the talk revolves around the techniques used for the creation of a worldbuilding pipeline for our studio Twirlbound. It features multiple biomes support and employs a hybrid approach for data editing (manual and procedural) in Unity Engine while accommodating multiple people working together simultaneously. As tangents to the main topic we will also explore: Techniques for working on large open-world terrain in a responsive manner, Our choice and reasoning of how we are managing large amounts of user input data, Secondary Pipelines - Watermesh Generation, Foliage Scattering, Gameplay Ingredient Scattering, and Houdini as a driver for Level and Game Design Decisions.',
-            'Ilia Tonev',
-            asset('images/talks/EPC2022_Ilia_Tonev_01.png'),
-            'April 23, 2023',
-            'Twirlbound',
-        ) }}
-
-        {{ conference.entry(
-            'Procedural Music Generation in Robo Maestro!',
-            'Joost van Dongen will talk about the creation of Robo Maestro, a fully procedural music toy. Joost will dive into how the generator itself works and the creative philosophy behind the project. Topics include making a procedural generator based on the creator\'s musical style and the challenges encountered when turning procedural music into a toy.',
-            'Joost van Dongen',
-            asset('images/talks/EPC2022_Joost_van_Dongen_01.png'),
-            'April 23, 2023',
-        ) }}
-
-        {{ conference.entry(
-            'Living Procedurally',
-            'Bouncing back and forth between his day job as a game artist and his night shift as a procedural tinkerer, Nikola will share how proceduralism has slowly creeped into all of his workflows and ways of artistic life. This talk will showcase his way of cross-pollinating between his day job and personal work, not chasing perfection but having fun while experimenting.',
-            'Nikola Damjanov',
-            asset('images/talks/EPC2022_Nikola_Damjanov_01.jpg'),
-            'April 23, 2023',
-            'Nordeus',
-        ) }}
     </div>
+    -->
+    <span class="top-triangle"></span>
+    <span class="triangle"></span>
 </section>
 
-{% macro entry(title, description, speaker, thumbnail, date, origin) %}
+{% macro entry(title, description, speaker, thumbnail, date, origin, avatar) %}
     <div class="card flex flex-col justify-between">
         <div>
-            <img class="mb-4 h-48 w-full rounded-lg" src="{{ thumbnail }}" alt="">
+            <img class="mb-4 h-48 w-full rounded" src="{{ thumbnail }}" alt="">
             <h3 class="text-2xl font-bold">{{ title }}</h3>
             <p class="mt-3 font-light">{{ description }}</p>
         </div>
 
         <div class="mt-4 flex flex-row space-x-4">
-            <img class="h-12 w-12 rounded-full object-contain" src="{{ asset('images/avatar-default.png') }}" alt="">
+            <img class="h-12 w-12 rounded-full object-contain" src="{{ avatar }}" alt="">
             <div class="flex flex-col">
                 <p class="text-lg font-medium">{{ speaker }}</p>
                 <p>{{ date }} {% if origin %}· {{ origin }} {% endif %}</p>

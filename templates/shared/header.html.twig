@@ -11,7 +11,7 @@
 
     <header class="flex h-16 flex-row items-center justify-between bg-white px-4 py-1 shadow-lg sm:justify-center sm:gap-8 lg:justify-evenly">
         <div class="sm:hidden w-[24px] lg:block lg:w-[160px] lg:hidden"></div>
-        <div class="flex h-full flex-row items-center justify-between sm:justify-center sm:gap-8">
+        <div class="flex h-full flex-row  items-center justify-between sm:justify-center sm:gap-8 font-sharetech">
             {{ header.route_header('Conference', '#conference') }}
             {{ header.route_header('Masterclass', '#masterclass') }}
             {{ header.route_header('Showcase', '#showcase') }}
@@ -21,7 +21,7 @@
     </header>
 
     <div data-menu-target="overlay" data-action="click->menu#close"
-         class="pointer-events-none fixed top-0 z-40 h-screen w-screen cursor-pointer bg-zinc-300 opacity-0 transition-opacity duration-500 ease-out"></div>
+         class="pointer-events-none fixed top-0 z-40 h-screen w-screen cursor-pointer bg-zinc-300 opacity-0 transition-opacity duration-500 ease-out font-sharetech"></div>
     <aside data-menu-target="menu" class="fixed top-0 -right-full z-50 h-full w-5/6 max-w-sm bg-white p-5 duration-500 ease-in-out md:-right-96">
         <button type="button" data-menu-target="closeButton"
                 class="pointer-events-none absolute top-0 -left-32 block w-max origin-bottom-right -rotate-90 uppercase opacity-0 duration-500 ease-in-out hover:text-white">
@@ -35,7 +35,7 @@
 
         <a href="javascript:void(0)" data-action="click->menu#close"
            class="mt-2 flex items-center rounded-full border border-black bg-black px-4 py-2 font-bold uppercase text-white hover:bg-white hover:text-black">
-            <span class="w-full">Get Tickets</span>
+            <span class="w-full font-sharetech">Get Tickets</span>
             <span class="pl-4"><i data-feather="chevron-right"></i></span>
         </a>
 

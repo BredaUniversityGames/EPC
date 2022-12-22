@@ -1,11 +1,16 @@
 {% import _self as masterclass %}
 
-<section class="relative p-4 container m-auto">
+<section class="relative p-8 container m-auto" >
+</section>
+
+<section class="relative p-4 container m-auto  bg-epcblue rounded">
     <span id="masterclass" class="absolute -top-16"></span>
-    <div class="h-full items-center justify-evenly pt-2 pb-4 text-center">
-        <h2 class="mb-2 text-4xl font-extrabold uppercase">Masterclass</h2>
+    <div class="h-full items-center justify-evenly pt-2 pb-4 text-center text-white">
+        <h2 class="mb-2 text-5xl font-extrabold uppercase font-sharetech">Masterclasses</h2>
+        <h2 class="mb-2 text-2xl font-extrabold uppercase font-sharetech">Wednesday 19-04-2023 &#38; Thursday 21-04-2023</h2>
     </div>
 
+    <!--
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {{ masterclass.entry(
             'Powerful Procedural Workflows for Games',
@@ -20,6 +25,9 @@
             'SideFX',
         ) }}
     </div>
+    -->
+    <span class="top-triangle"></span>
+    <span class="triangle"></span>
 </section>
 
 {% macro entry(title, description, takeaway, audience, prerequisites, thumbnail_before, thumbnail_after, speaker, date, origin) %}
