@@ -11,11 +11,11 @@
 
     <header class="flex h-16 flex-row items-center justify-between bg-white px-4 py-1 shadow-lg sm:justify-center sm:gap-8 lg:justify-evenly">
         <div class="sm:hidden w-[24px] lg:block lg:w-[160px] lg:hidden"></div>
-        <div class="flex h-full flex-row  items-center justify-between sm:justify-center sm:gap-8 font-sharetech">
+        <div class="flex h-full flex-row items-center justify-between font-sharetech sm:justify-center sm:gap-8">
             {{ header.route_header('Conference', '#conference') }}
             {{ header.route_header('Masterclass', '#masterclass') }}
             {{ header.route_header('Showcase', '#showcase') }}
-            <a href="#" class="hidden text-sm font-bold uppercase animate-underline sm:block">Tickets</a>
+            {{ header.route_header('Tickets', 'javascript:void(0)') }}
         </div>
         <button class="sm:hidden" type="button" data-action="click->menu#open"><i data-feather="menu"></i></button>
     </header>
@@ -73,7 +73,7 @@
 {% endmacro %}
 
 {% macro route_header(name, route = 'javascript:void(0)') %}
-    <a href="{{ route }}" class="flex hidden flex-nowrap text-sm font-bold uppercase animate-underline sm:inline-block">{{ name }}</a>
+    <a href="{{ route }}" class="flex hidden flex-nowrap text-2xl font-bold uppercase animate-underline sm:inline-block">{{ name }}</a>
 {% endmacro %}
 
 {% macro banner(message, short_message, route) %}
