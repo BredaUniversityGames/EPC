@@ -23,7 +23,7 @@ module.exports = {
             fontSize: {    
                 'huge': '8.38rem',        
                 'damn': '18.5rem',
-            },
+            },                        
         },
     },
     plugins: [],
