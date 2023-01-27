@@ -21,11 +21,10 @@
     </header>
 
     <div data-menu-target="overlay" data-action="click->menu#close"
-         class="pointer-events-none fixed top-0 z-40 h-screen w-screen cursor-pointer bg-zinc-300 opacity-0 transition-opacity duration-500 ease-out font-sharetech"></div>
+         class="pointer-events-none fixed top-0 z-40 h-screen w-screen cursor-pointer  bg-zinc-300 opacity-0 transition-opacity duration-500 ease-out font-sharetech"></div>
     <aside data-menu-target="menu" class="fixed top-0 -right-full z-50 h-full w-5/6 max-w-sm bg-white p-5 duration-500 ease-in-out md:-right-96">
         <button type="button" data-menu-target="closeButton"
-                class="pointer-events-none absolute top-0 -left-32 block w-max origin-bottom-right -rotate-90 uppercase opacity-0 duration-500 ease-in-out hover:text-white">
-            x close sidebar
+                class="pointer-events-none absolute top-0 -left-32 block w-max origin-bottom-right -rotate-90 uppercase opacity-0 duration-500 ease-in-out hover:text-white"> 
         </button>
 
         {{ header.route_menu('Home', '#') }}
@@ -66,7 +65,7 @@
 </div>
 
 {% macro route_menu(name, route = 'javascript:void(0)') %}
-    <a href="{{ route }}" data-action="click->menu#close" class="flex h-12 items-center rounded-lg px-4 hover:bg-zinc-100">
+    <a href="{{ route }}" data-action="click->menu#close" class="flex h-12 items-center font-sharetech rounded-lg px-4 hover:bg-zinc-100">
         <span class="w-full">{{ name }}</span>
         <span class="pl-4"><i data-feather="chevron-right"></i></span>
     </a>
