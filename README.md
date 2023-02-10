@@ -20,6 +20,31 @@ Open a terminal in the root folder of this repository and run:
 npm install
 ```
 
+### Scoop
+
+Scoop is used to install the Symfony command line tool that you will need to run a local server for viewing the page during development.
+
+To install Scoop, running the following command in a PowerShell terminal:
+
+```PowerShell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+irm get.scoop.sh | iex
+```
+
+Run the following command to see if Scoop is installed correctly:
+
+```PowerShell
+scoop status
+```
+
+### Symfony
+
+The Symfony CLI can be installed using scoop:
+
+```PowerShell
+scoop install symfony-cli
+```
+
 ### PHP
 
 Download and install PHP 8.2 from https://www.php.net/downloads
@@ -35,6 +60,8 @@ Download and install Composer from: https://getcomposer.org/download/
 During installation, you need to specify the folder where you extracted the PHP zip file to.
 
 Make sure you add Composer and the PHP folder to the `PATH` environment variable during the installation.
+
+> Note: You may need to restart Visual Studio Code to update the `PATH` environment variable so it can find the `composer` command.
 
 Open a terminal in the root folder of this repository and run:
 
@@ -55,7 +82,7 @@ npm run build
 To generate certificates for the local server, run:
 
 ```bash
-.\symfony.exe server:ca:install
+symfony server:ca:install
 ```
 
 ### Serve
@@ -63,7 +90,7 @@ To generate certificates for the local server, run:
 To start a local server run:
 
 ```bash
-.\symfony.exe serve
+symfony serve
 ```
 
 ### View
